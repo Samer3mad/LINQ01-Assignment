@@ -34,10 +34,20 @@ namespace Assignment
             #endregion
 
             #region LINQ - Ordering Operators
+            #region Question 01
             var Names = ProductList.OrderBy(p => p.ProductName).ToList();
 
             foreach (var product in Names)
                 Console.WriteLine(product.ProductName);
+            #endregion
+
+            #region Question 03
+            var sorteDescending = ProductList.OrderByDescending(p => p.UnitsInStock);
+
+            foreach (var product in sorteDescending)
+                Console.WriteLine($"{product.ProductName}: {product.UnitsInStock} units");
+
+            #endregion
             #endregion
         }
     }
