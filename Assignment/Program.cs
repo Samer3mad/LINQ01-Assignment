@@ -1,4 +1,5 @@
-﻿using static Assignment.ListGenerator;
+﻿using System.Collections.Immutable;
+using static Assignment.ListGenerator;
 
 namespace Assignment
 {
@@ -20,16 +21,23 @@ namespace Assignment
             #endregion
 
             #region Question 02
-            var res = ProductList.Where(P => P.UnitsInStock != 0 && P.UnitPrice > 3);
-
-            var Res = from p in ProductList
-                      where p.UnitsInStock == 0
-                      select p;
-            foreach (var item in Res)
-            {
-                Console.WriteLine(item);
-            }
+            //var res = ProductList.Where(P => P.UnitsInStock != 0 && P.UnitPrice > 3);
+            //
+            //var Res = from p in ProductList
+            //          where p.UnitsInStock == 0
+            //          select p;
+            //foreach (var item in Res)
+            //{
+            //    Console.WriteLine(item);
+            //}
             #endregion
+            #endregion
+
+            #region LINQ - Ordering Operators
+            var Names = ProductList.OrderBy(p => p.ProductName).ToList();
+
+            foreach (var product in Names)
+                Console.WriteLine(product.ProductName);
             #endregion
         }
     }
