@@ -35,17 +35,25 @@ namespace Assignment
 
             #region LINQ - Ordering Operators
             #region Question 01
-            var Names = ProductList.OrderBy(p => p.ProductName).ToList();
-
-            foreach (var product in Names)
-                Console.WriteLine(product.ProductName);
+            //var Names = ProductList.OrderBy(p => p.ProductName).ToList();
+            //
+            //foreach (var product in Names)
+            //    Console.WriteLine(product.ProductName);
             #endregion
 
             #region Question 03
-            var sorteDescending = ProductList.OrderByDescending(p => p.UnitsInStock);
+            //var sorteDescending = ProductList.OrderByDescending(p => p.UnitsInStock);
+            //
+            //foreach (var product in sorteDescending)
+            //    Console.WriteLine($"{product.ProductName}: {product.UnitsInStock} units");
 
-            foreach (var product in sorteDescending)
-                Console.WriteLine($"{product.ProductName}: {product.UnitsInStock} units");
+            #endregion
+
+            #region Question 06
+            var sorteProducts = ProductList.OrderBy(p => p.Category).OrderByDescending(p => p.UnitPrice);
+
+            foreach (var product in sorteProducts)
+                Console.WriteLine($"Product Category: {product.Category} ---------- Product Name: {product.ProductName} ---------- Product Price: {product.UnitPrice}");
 
             #endregion
             #endregion
