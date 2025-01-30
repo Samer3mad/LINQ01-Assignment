@@ -50,10 +50,20 @@ namespace Assignment
             #endregion
 
             #region Question 06
-            var sorteProducts = ProductList.OrderBy(p => p.Category).OrderByDescending(p => p.UnitPrice);
+            //var sorteProducts = ProductList.OrderBy(p => p.Category).OrderByDescending(p => p.UnitPrice);
+            //
+            //foreach (var product in sorteProducts)
+            //    Console.WriteLine($"Product Category: {product.Category} ---------- Product Name: {product.ProductName} ---------- Product Price: {product.UnitPrice}");
 
-            foreach (var product in sorteProducts)
-                Console.WriteLine($"Product Category: {product.Category} ---------- Product Name: {product.ProductName} ---------- Product Price: {product.UnitPrice}");
+            #endregion
+            #endregion
+
+            #region LINQ – Transformation Operators
+            #region Question 01
+            //var productNames = ProductList.Select(p => p.ProductName);
+
+            //foreach (var name in productNames)
+            //    Console.WriteLine(name);
 
             #endregion
             #endregion
