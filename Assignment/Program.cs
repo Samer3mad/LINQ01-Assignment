@@ -8,17 +8,29 @@ namespace Assignment
         {
             #region LINQ - Restriction Operators
             #region Question 01
-            var res = ProductList.Where(P => P.UnitsInStock == 0);
+            //var res = ProductList.Where(P => P.UnitsInStock == 0);
+
+            //var Res = from p in ProductList
+            //      where p.UnitsInStock == 0
+            //      select p;
+            //foreach (var item in Res)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            #endregion
+
+            #region Question 02
+            var res = ProductList.Where(P => P.UnitsInStock != 0 && P.UnitPrice > 3);
 
             var Res = from p in ProductList
-                  where p.UnitsInStock == 0
-                  select p;
+                      where p.UnitsInStock == 0
+                      select p;
             foreach (var item in Res)
             {
                 Console.WriteLine(item);
             }
-                #endregion
-                #endregion
+            #endregion
+            #endregion
         }
     }
 }
