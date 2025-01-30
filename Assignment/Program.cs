@@ -66,6 +66,20 @@ namespace Assignment
             //    Console.WriteLine(name);
 
             #endregion
+
+            #region Question 03
+            //var productDetails = ListGenerator.ProductList
+            //         .Select(p => new
+            //         {
+            //             p.ProductName,
+            //             Price = p.UnitPrice,
+            //             p.UnitsInStock
+            //         });
+            //
+            //foreach (var product in productDetails)
+            //    Console.WriteLine($"Name: {product.ProductName}, Price: {product.Price}, Stock: {product.UnitsInStock}");
+
+            #endregion
             #endregion
         }
     }
